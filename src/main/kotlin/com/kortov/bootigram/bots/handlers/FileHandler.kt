@@ -14,8 +14,7 @@ class FileHandler(val parser: JsonParser) {
     }
 
     private val resourceLoader: DefaultResourceLoader by lazy {
-        val resourceLoader = DefaultResourceLoader()
-        resourceLoader
+        return@lazy DefaultResourceLoader()
     }
 
     fun readFileFromResourcesAsString(fileName: String): String? {
